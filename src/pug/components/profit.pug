@@ -1,0 +1,13 @@
+block profitVars 
+  - var profit_heading = 'Выгода:';
+  - var profit_list = [ { heading: 'Цена', desc: 'Низкая цена относительно других площадок' }, { heading: 'Трудоустройство', desc: 'Поможем трудоустроится после окончания обучения' }, ];
+
+
+section#profit.profit 
+  .container.profit__ccntainer 
+    h2.profit__heading.heading #{profit_heading}
+    ul.profit__list 
+      for item of profit_list 
+        li.profit__item 
+          h3.profit__heading_item #{item.heading}
+          p.profit__desc_item #{item.desc}

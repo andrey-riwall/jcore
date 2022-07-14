@@ -1,0 +1,37 @@
+.guarant {
+  padding: vw(50);
+}
+
+.guarant__heading {
+  margin-bottom: vw(50);
+}
+
+.guarant__list {
+  display: flex;
+  flex-direction: column;
+  gap: vw(20);
+}
+
+.guarant__item {
+  position: relative;
+
+  padding-left: vw(20);
+
+  font-weight: 500;
+  font-size: vw(34);
+  line-height: 120%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: vw(10);
+    height: vw(10);
+
+    border-radius: 100%;
+    background: #000;
+  }
+}

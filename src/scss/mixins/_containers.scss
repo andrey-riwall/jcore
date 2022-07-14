@@ -1,0 +1,19 @@
+@mixin container($pt: 0, $pr: 15px, $width: 1440px, $name: container) {
+  .#{$name} {
+    max-width: calc(#{$width} + #{$pr} * 2);
+    padding: #{pt} #{$pr};
+    margin: 0 auto;
+  }
+}
+
+@mixin sect-container($name: container, $height: 100%, $display: flex, $ai: center, $jc: space-between) {
+  .#{$name} {
+    display: #{$display};
+    @if $display == flex {
+      align-items: #{$ai};
+      justify-content: #{$jc};
+    }
+    height: #{$height};
+  }
+}
+

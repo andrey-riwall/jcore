@@ -1,0 +1,34 @@
+@mixin heading($fw: 700, $fz: 30px, $lh: 100%, $color: $text_color, $mb: 20px, $name: heading) {
+  .#{$name} {
+    font-weight: #{$fw};
+    font-size: #{$fz};
+    line-height: #{$lh};
+    color: #{$color};
+
+    margin-bottom: #{$mb};
+  } 
+}
+@mixin desc($fw: 400, $fz: 20px, $lh: 120%, $color: $text_color, $mb: 20px, $name: desc) {
+  .#{$name} {
+    font-weight: #{$fw};
+    font-size: #{$fz};
+    line-height: #{$lh};
+    color: #{$color};
+
+    margin-bottom: #{$mb};
+  }
+}
+@mixin btn($pt: 15px, $pr: 50px, $bg: $main_color, $br: 7px, $fw: 400, $fz: 20px, $color: $bg_color, $mb: 20px, $name: btn) {
+  .#{$name} {
+    padding: #{$pt} #{$pr};
+
+    font-weight: #{$fw};
+    font-size: #{$fz};
+    color: #{$color};
+    
+    background: #{$bg};
+    border-radius: #{$br};
+
+    margin-bottom: #{$mb};
+  }
+}

@@ -1,0 +1,32 @@
+.header {
+  height: vw(100);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+  }
+}
+
+.header__logo {
+  font-weight: 600;
+  font-size: vw(30);
+  line-height: 120%;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: vw(50);
+}
+
+.header__item {
+  a {
+    font-size: vw(24);
+    line-height: 120%;
+  }
+}

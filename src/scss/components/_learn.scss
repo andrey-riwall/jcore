@@ -1,0 +1,36 @@
+.learn {
+  padding: vw(50);
+}
+
+.learn__heading {
+  margin-bottom: vw(50);
+}
+
+.learn__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: vw(70);
+}
+
+.learn__item {
+  position: relative;
+
+  padding-left: vw(20);
+
+  font-weight: 500;
+  font-size: vw(34);
+  line-height: 150%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: vw(20);
+
+    width: vw(10);
+    height: vw(10);
+
+    background: #000;
+    border-radius: 100%;
+  }
+}

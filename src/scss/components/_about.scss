@@ -1,0 +1,38 @@
+.about {
+  padding-top: vw(100);
+  padding-bottom: vw(50);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: vw(40);
+  }
+}
+
+.about__heading {
+  font-weight: 600;
+  font-size: vw(72);
+  line-height: 120%;
+}
+
+.about__list {
+  display: flex;
+  align-items: center;
+  gap: vw(40);
+}
+
+.about__item {
+  padding: vw(10) vw(25);
+  border: vw(1) solid $text_color;
+  border-radius: vw(50);
+
+  font-size: vw(35);
+}
+
+.about__desc {
+  max-width: vw(753);
+
+  font-weight: 600;
+  font-size: vw(32);
+  line-height: 120%;
+}

@@ -1,0 +1,13 @@
+block aboutVars 
+  - var about_heading = 'Образовательная площадка,';
+  - var about_list = [ 'java', 'java_dev', 'java_learn' ];
+  - var about_desc = 'где обучают языку программирования Java по актуальным материалам и продуктивным схемам обучения.';
+
+
+section#about.about
+  .container.about__container 
+    h1.about__heading #{about_heading}
+    ul.about__list 
+      for item of about_list
+        li.about__item ##{item}
+    p.about__desc #{about_desc}

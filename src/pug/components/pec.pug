@@ -1,0 +1,15 @@
+block pecVars 
+  - var pec_heading = 'Особенности:';
+  - var pec_list = [ { heading: 'Чат для учеников', desc: 'где они могут общаться в свободное время' }, { heading: 'Опытные преподаватели', desc: 'знают как научить' }, { heading: 'Занятия', desc: 'одновременно интересные и практичные' }, ];
+
+
+section#pec.pec 
+  .container.pec__container 
+    h2.pec__heading.heading #{pec_heading}
+  .container.pec__container_card
+    ul.pec__list
+      for item, index in pec_list 
+        li.pec__item
+          span.pec__num #{index + 1}
+          h3.pec__heading_card #{item.heading}
+          p.pec__desc_card #{item.desc}

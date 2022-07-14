@@ -1,0 +1,18 @@
+block contactsVars 
+  - var contacts_heading = 'Контакты:';
+
+
+section#contacts.contacts 
+  .container.contacts__container 
+    h2.contacts__heading.heading #{contacts_heading}
+    ul.contacts__list
+      li.contacts__item 
+        a.contacts__link(href="tel::+79999999999") +7 (999) 999 99-99
+        p.contacts__desc Контактный центр 
+      li.contacts__item 
+        a.contacts__link(href="mailto::hello@jcore.com") hello@jcore.com
+      li.contacts__item 
+        a.contacts__link(href="tel::+79999999999") +7 (999) 999 99-99
+        p.contacts__desc Отдел заботы о пользователях
+      li.contacts__item
+        p.contacts__desc.contacts__desc_adress г. Москва, улица Пушкина, дом Кукушкина 
