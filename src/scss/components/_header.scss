@@ -1,6 +1,14 @@
 .header {
   height: vw(100);
 
+  @include m1024 {
+    height: vw(150);
+  }
+
+  @include m500 {
+    height: vw(200);
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -14,6 +22,14 @@
   font-weight: 600;
   font-size: vw(30);
   line-height: 120%;
+
+  @include m1024 {
+    font-size: vw(55);
+  }
+
+  @include m500 {
+    font-size: vw(90);
+  }
 }
 
 .header__list {
@@ -22,11 +38,27 @@
   justify-content: center;
 
   gap: vw(50);
+
+  @include m1024 {
+    gap: vw(150);
+  }
+
+  @include m500 {
+    gap: vw(200);
+  }
 }
 
 .header__item {
   a {
     font-size: vw(24);
     line-height: 120%;
+
+    @include m1024 {
+      font-size: vw(36);
+    }
+
+    @include m500 {
+      font-size: vw(60);
+    }
   }
 }

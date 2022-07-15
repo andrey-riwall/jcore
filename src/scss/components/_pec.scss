@@ -1,9 +1,21 @@
 .pec {
   padding: vw(50) 0;
+
+  @include m1024 {
+    padding: vw(75) 0;
+  }
+
+  @include m500 {
+    padding: vw(100) 0;
+  }
 }
 
 .pec__container_card {
   max-width: vw(1250);
+
+  @include m1024 {
+    max-width: vw(1800);
+  }
 }
 
 .pec__heading {
@@ -14,6 +26,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include m500 {
+    display: grid;
+    grid-template-columns: repeat(2, vw(850));
+    grid-template-rows: repeat(2, vw(850));
+    grid-gap: vw(70);
+  }
 }
 
 .pec__item {
@@ -26,6 +45,22 @@
 
   border-radius: vw(20);
 
+  @include m1024 {
+    width: vw(540);
+    height: vw(540);
+    padding: vw(50);
+
+    border-radius: vw(40);
+  }
+
+  @include m500 {
+    width: 100%;
+    height: 100%;
+    padding: vw(100);
+
+    border-radius: vw(80);
+  }
+
   &:nth-child(1) {
     background: #00B8A9;
   }
@@ -33,6 +68,7 @@
     background: #F8F3D4;
   }
   &:nth-child(3) {
+    grid-column: span 2;
     background: #FFDE7D;
   }
 }
@@ -53,6 +89,20 @@
   line-height: 120%;
 
   color: #FFFFFF;
+
+  @include m1024 {
+    width: vw(60);
+    height: vw(60);
+
+    font-size: vw(40);
+  }
+
+  @include m500 {
+    width: vw(100);
+    height: vw(100);
+
+    font-size: vw(70);
+  }
 }
 
 .pec__heading_card {
@@ -61,6 +111,18 @@
   font-weight: 600;
   font-size: vw(28);
   line-height: 120%;
+
+  @include m1024 {
+    padding-top: vw(110);
+
+    font-size: vw(45);
+  }
+
+  @include m500 {
+    padding-top: vw(70);
+
+    font-size: vw(70);
+  }
 }
 
 .pec__desc_card {
@@ -68,4 +130,12 @@
   line-height: 120%;
 
   margin-top: auto;
+
+  @include m1024 {
+    font-size: vw(30);
+  }
+
+  @include m500 {
+    font-size: vw(60);
+  }
 }

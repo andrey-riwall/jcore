@@ -2,10 +2,29 @@
   padding-top: vw(100);
   padding-bottom: vw(50);
 
+  @include m1024 {
+    padding-top: vw(170);
+    padding-bottom: vw(85);
+  }
+
+  @include m500 {
+    padding-top: vw(400);
+    padding-bottom: vw(100);
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     gap: vw(40);
+
+    @include m1024 {
+      gap: vw(70);
+    }
+
+    @include m500 {
+      align-items: center;
+      gap: vw(100);
+    }
   }
 }
 
@@ -13,12 +32,30 @@
   font-weight: 600;
   font-size: vw(72);
   line-height: 120%;
+
+  @include m1024 {
+    font-size: vw(140);
+  }
+
+  @include m1024 {
+    font-size: vw(160);
+    text-align: center;
+  }
 }
 
 .about__list {
   display: flex;
   align-items: center;
   gap: vw(40);
+
+  @include m1024 {
+    gap: vw(70);
+  }
+
+  @include m500 {
+    justify-content: center;
+    gap: vw(50);
+  }
 }
 
 .about__item {
@@ -27,6 +64,18 @@
   border-radius: vw(50);
 
   font-size: vw(35);
+
+  @include m1024 {
+    padding: vw(25) vw(60);
+    border-radius: vw(100);
+
+    font-size: vw(70);
+  }
+
+  @include m500 {
+    padding: vw(30) vw(60);
+    border-radius: vw(150);
+  }
 }
 
 .about__desc {
@@ -35,4 +84,18 @@
   font-weight: 600;
   font-size: vw(32);
   line-height: 120%;
+
+  @include m1024 {
+    font-weight: 500;
+    max-width: vw(1500);
+
+    font-size: vw(70);
+  }
+
+  @include m500 {
+    max-width: vw(1400);
+
+    font-size: vw(70);
+    text-align: center;
+  }
 }

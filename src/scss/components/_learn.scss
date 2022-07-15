@@ -1,5 +1,13 @@
 .learn {
-  padding: vw(50);
+  padding: vw(50) 0;
+
+  @include m1024 {
+    padding: vw(75) 0;
+  }
+
+  @include m500 {
+    padding: vw(100) 0;
+  }
 }
 
 .learn__heading {
@@ -10,6 +18,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: vw(70);
+
+  @include m1024 {
+    grid-gap: vw(100);
+  }
 }
 
 .learn__item {
@@ -20,6 +32,18 @@
   font-weight: 500;
   font-size: vw(34);
   line-height: 150%;
+
+  @include m1024 {
+    padding-left: vw(30);
+
+    font-size: vw(45);
+  }
+
+  @include m500 {
+    padding-left: vw(45);
+
+    font-size: vw(60);
+  }
 
   &::before {
     content: '';
@@ -32,5 +56,19 @@
 
     background: #000;
     border-radius: 100%;
+
+    @include m1024 {
+      top: vw(25);
+
+      width: vw(15);
+      height: vw(15);
+    }
+
+    @include m500 {
+      top: vw(30);
+
+      width: vw(22);
+      height: vw(22);
+    }
   }
 }

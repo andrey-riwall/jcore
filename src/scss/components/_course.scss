@@ -1,13 +1,33 @@
 .course {
   padding: vw(50) 0;
+
+  @include m1024 {
+    padding: vw(75) 0;
+  }
+
+  @include m500 {
+    padding: vw(100) 0;
+  }
 }
 
 .course__heading {
   margin-bottom: vw(25);
+
+  @include m1024 {
+    margin-bottom: vw(50);
+  }
+
+  @include m500 {
+    margin-bottom: vw(60);
+  }
 }
 
 .course__container_card {
   max-width: vw(1550);
+
+  @include m1024 {
+    max-width: vw(1800);
+  }
 }
 
 .course__card {
@@ -16,6 +36,24 @@
   border-radius: vw(40);
 
   margin-bottom: vw(50);
+
+  @include m1024 {
+    padding: vw(200) vw(200) vw(140) vw(200);
+    border-radius: vw(80);
+
+    margin-bottom: vw(100);
+  }
+
+  @include m500 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: vw(300) vw(150) vw(200) vw(150);
+    border-radius: vw(80);
+
+    margin-bottom: vw(150);
+  }
 }
 
 .course__heading_card {
@@ -25,6 +63,18 @@
 
   color: #fff;
   margin-bottom: vw(20);
+
+  @include m1024 {
+    font-size: vw(100);
+
+    margin-bottom: vw(40);
+  }
+
+  @include m500 {
+    font-size: vw(130);
+
+    margin-bottom: vw(100);
+  }
 }
 
 .course__desc_card {
@@ -35,6 +85,24 @@
 
   color: #FFFFFF;
   margin-bottom: vw(155);
+
+  @include m1024 {
+    max-width: vw(1100);
+
+    font-size: vw(48);
+
+    margin-bottom: vw(100);
+  }
+
+  @include m500 {
+    max-width: 100%;
+
+    font-size: vw(80);
+    line-height: 150%;
+    text-align: center;
+
+    margin-bottom: vw(200);
+  }
 }
 
 .course__btn_card {
@@ -45,23 +113,63 @@
   font-weight: 500;
   font-size: vw(28);
   line-height: 120%;
+
+  @include m1024 {
+    padding: vw(30) vw(80);
+    border-radius: vw(30);
+
+    font-size: vw(42);
+  }
+
+  @include m500 {
+    padding: vw(60) vw(150);
+    border-radius: vw(60);
+
+    font-size: vw(70);
+  }
 }
 
 .course__list {
   display: flex;
   justify-content: space-between;
+
+  @include m1024 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: vw(60);
+  }
+
+  @include m1024 {
+    grid-gap: vw(80);
+  }
 }
 
 .course__item {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include m1024 {
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .course__heading_list {
   font-weight: 500;
   font-size: vw(32);
   line-height: 120%;
+  text-align: end;
+
+  @include m1024 {
+    font-weight: 600;
+    font-size: vw(50);
+    text-align: center;
+  }
+
+  @include m500 {
+    font-size: vw(77);
+  }
 }
 
 .course__desc_list {
@@ -70,4 +178,14 @@
   font-size: vw(28);
   line-height: 120%;
   text-align: end;
+  
+  @include m1024 {
+    font-size: vw(45);
+    text-align: center;
+  }
+
+  @include m500 {
+    font-size: vw(60);
+    text-align: center;
+  }
 }

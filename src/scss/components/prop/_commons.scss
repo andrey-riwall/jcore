@@ -2,4 +2,12 @@
   font-weight: 600;
   font-size: vw(54);
   line-height: 120%;
+
+  @include m1024 {
+    font-size: vw(90);
+  }
+
+  @include m500 {
+    font-size: vw(100);
+  }
 }

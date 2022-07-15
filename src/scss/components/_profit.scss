@@ -1,5 +1,13 @@
 .profit {
   padding: vw(50) 0;
+
+  @include m1024 {
+    padding: vw(75) 0;
+  }
+
+  @include m500 {
+    padding: vw(100) 0;
+  }
 }
 
 .profit__heading {
@@ -9,6 +17,14 @@
 .profit__list {
   display: flex;
   gap: vw(100);
+
+  @include m1024 {
+    gap: vw(150);
+  }
+
+  @include m500 {
+    gap: vw(200);
+  }
 }
 
 .profit__item {
@@ -17,15 +33,43 @@
   gap: vw(15);
 
   max-width: vw(450);
+
+  @include m1024 {
+    gap: vw(10);
+    
+    max-width: vw(725);
+  }
+
+  @include m500 {
+    gap: vw(20);
+    
+    max-width: vw(725);
+  }
 }
 
 .profit__heading_item {
   font-weight: 500;
   font-size: vw(34);
   line-height: 120%;
+
+  @include m1024 {
+    font-size: vw(50);
+  }
+
+  @include m500 {
+    font-size: vw(80);
+  }
 }
 
 .profit__desc_item {
   font-size: vw(28);
   line-height: 120%;
+
+  @include m1024 {
+    font-size: vw(40);
+  }
+
+  @include m500 {
+    font-size: vw(60);
+  }
 }

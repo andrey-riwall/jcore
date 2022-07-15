@@ -1,5 +1,13 @@
 .guarant {
-  padding: vw(50);
+  padding: vw(50) 0;
+
+  @include m1024 {
+    padding: vw(75) 0;
+  }
+
+  @include m500 {
+    padding: vw(100) 0;
+  }
 }
 
 .guarant__heading {
@@ -10,6 +18,14 @@
   display: flex;
   flex-direction: column;
   gap: vw(20);
+
+  @include m1024 {
+    gap: vw(40);
+  }
+
+  @include m500 {
+    gap: vw(60);
+  }
 }
 
 .guarant__item {
@@ -20,6 +36,18 @@
   font-weight: 500;
   font-size: vw(34);
   line-height: 120%;
+
+  @include m1024 {
+    padding-left: vw(30);
+
+    font-size: vw(45);
+  }
+
+  @include m500 {
+    padding-left: vw(45);
+
+    font-size: vw(80);
+  }
 
   &::before {
     content: '';
@@ -33,5 +61,15 @@
 
     border-radius: 100%;
     background: #000;
+
+    @include m1024 {
+      width: vw(15);
+      height: vw(15);
+    }
+
+    @include m500 {
+      width: vw(22);
+      height: vw(22);
+    }
   }
 }

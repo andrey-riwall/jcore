@@ -72,12 +72,6 @@ const layout = () => {
 		.pipe(dest('dist'))
 		.pipe(browsersync.stream())
 }
-
-const layoutLinter = () => {
-	return src('src/**/*.pug')
-		.pipe(pugLinter({ failAfterError: true }))
-}
-
 const svgSprites = () => {
 	return src('src/img/**/*.svg')
 		.pipe(svgsprite({
@@ -160,8 +154,8 @@ exports.fonts = fonts;
 exports.svgSprites = svgSprites;
 exports.img = img;
 exports.clean = clean;
-exports.default = series(clean, parallel(layout, layoutLinter, scripts, fonts, resources, img, svgSprites), styles, watchFiles);
-// exports.default = series(clean, fonts, resources, layout, layoutLinter, scripts, styles, img, svgSprites, watchFiles);
+exports.default = series(clean, parallel(layout, scripts, fonts, resources, img, svgSprites), styles, watchFiles);
+// exports.default = series(clean, fonts, resources, layout, scripts, styles, img, svgSprites, watchFiles);
 
 
 
@@ -213,7 +207,7 @@ const scriptsBuild = () => {
 }
 
 const layoutBuild = () => {
-	return src('./src/**/*.pug')
+	return src('./src/index.pug')
 		.pipe(pug({
 			pretty: false
 		}).on('error', notify.onError()))
